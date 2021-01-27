@@ -1,0 +1,166 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 50%; }
+  @media only screen and (max-width: 52em) {
+    html {
+      font-size: 40%; } }
+
+body {
+  background-color: #FFF;
+  font-size: 1.6rem;
+  font-family: 'Spartan', sans-serif;
+  color: gray;
+  height: 100%; }
+
+.grid {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+  width: 100vw; }
+  @media only screen and (max-width: 52em) {
+    .grid {
+      grid-template-rows: 30% 1fr; } }
+
+.topbar {
+  width: 100%;
+  background: url(../images/pattern-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  text-align: center;
+  padding: 3rem 0; }
+  @media only screen and (max-width: 52em) {
+    .topbar {
+      padding: 3rem 0 3rem 0; } }
+  .topbar h2 {
+    margin-bottom: 3rem;
+    font-size: 3rem; }
+    @media only screen and (max-width: 52em) {
+      .topbar h2 {
+        margin-bottom: 2rem; } }
+
+.result-container {
+  height: 2rem;
+  position: relative; }
+
+.result {
+  min-width: 80vw;
+  min-height: 10vh;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+  padding: 2rem;
+  box-shadow: 0 0.5rem 1.5rem 0.5rem rgba(0, 0, 0, 0.1); }
+  .result-box {
+    padding: 0 4rem 0 3rem;
+    text-align: left;
+    margin-bottom: 1rem; }
+    .result-box:not(:last-child) {
+      border-right: 1px solid #DDDDDD; }
+    .result-box-header {
+      color: #929292;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      font-variant: all-small-caps;
+      letter-spacing: 0.25rem; }
+    .result-box-details {
+      color: black;
+      font-size: 2rem;
+      font-weight: bold;
+      font-size: 2.5rem; }
+  @media only screen and (max-width: 52em) {
+    .result {
+      grid-template-columns: 1fr;
+      border-radius: 10px;
+      min-width: 90vw;
+      min-height: 30vh; }
+      .result-box {
+        text-align: center;
+        margin-bottom: 2.5rem; }
+        .result-box:not(:last-child) {
+          border-right: none; } }
+
+.map {
+  z-index: 1;
+  background-color: #F0E9E1;
+  position: relative; }
+
+.spinner-box {
+  text-align: center;
+  height: 100vh;
+  margin: 10% 0; }
+
+.spinner {
+  animation: 2s linear infinite svg-animation;
+  max-width: 50px; }
+  .spinner-circle {
+    animation: 1.4s ease-in-out infinite both circle-animation;
+    display: block;
+    fill: transparent;
+    stroke: #15B1CC;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 280;
+    stroke-width: 10px;
+    transform-origin: 50% 50%;
+    transform: translate(-50%, -50%); }
+
+@keyframes svg-animation {
+  0% {
+    transform: rotateZ(0deg); }
+  100% {
+    transform: rotateZ(360deg); } }
+
+@keyframes circle-animation {
+  0%,
+  25% {
+    stroke-dashoffset: 280;
+    transform: rotate(0); }
+  50%,
+  75% {
+    stroke-dashoffset: 75;
+    transform: rotate(45deg); }
+  100% {
+    stroke-dashoffset: 280;
+    transform: rotate(360deg); } }
+
+.searchBar {
+  max-width: 40%;
+  height: 6rem;
+  margin: 0 auto;
+  margin-bottom: 3rem; }
+  @media only screen and (max-width: 52em) {
+    .searchBar {
+      min-width: 90%;
+      margin-bottom: 2rem; } }
+  .searchBar input {
+    width: 90%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    padding-left: 2rem;
+    border: none; }
+  .searchBar button {
+    background-color: black;
+    color: white;
+    width: 10%;
+    height: 100%;
+    margin-left: -1rem;
+    border-radius: 0 10px 10px 0;
+    border: none; }
+  @media only screen and (max-width: 52em) {
+    .searchBar {
+      width: 90%; } }

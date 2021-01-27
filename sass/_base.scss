@@ -1,0 +1,43 @@
+//RESPONSIVE VARIABLES
+$bp-desktop: 90em; //1440px
+$bp-desktop-sm: 75em; //1200px
+$bp-tablet: 50em; //800px
+$bp-mobile: 52em;
+// $bp-mobile: 25em; //375px
+
+//COLORS
+$color-white: #FFF;
+
+$margin-top: 3rem;
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 50%; 
+
+    // @media only screen and (max-width: $bp-desktop-sm) {
+    //     font-size: 50%;
+    // }
+
+    @media only screen and (max-width: $bp-mobile) {
+        font-size: 40%;
+    }
+
+}
+
+body {
+    background-color: $color-white;
+    font-size: 1.6rem;
+    font-family: 'Rubik', sans-serif;
+    color: gray;
+    height: 100%;
+}
+

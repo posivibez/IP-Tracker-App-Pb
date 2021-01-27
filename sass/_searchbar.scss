@@ -1,0 +1,39 @@
+.searchBar {
+    max-width: 40%;
+    height: 6rem;
+    margin: 0 auto;
+    margin-bottom: $margin-top;
+
+    @media only screen and (max-width: $bp-mobile) {
+        min-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    
+    & input {
+        width: 90%;
+        height: 100%;
+        border-radius: 10px 0 0 10px;
+        padding-left: 2rem;
+        border: none;
+
+        // &::placeholder {
+        //     color: red;
+        // }
+
+    }
+
+    & button {
+        background-color: black;
+        color: white;
+        width: 10%;
+        height: 100%;
+        margin-left: -1rem;
+        border-radius: 0 10px 10px 0;
+        border: none;
+    }
+
+    @media only screen and (max-width: $bp-mobile) {
+    width: 90%;
+    }
+}
